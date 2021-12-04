@@ -1,0 +1,269 @@
+body{
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-size: 1.4em;
+    background-color: rgb(235, 235, 235);
+}
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0; 
+    z-index: 1;
+}
+main{
+    display: block;
+    position: static;
+    top: 100px;
+}
+
+.logo{
+    background-color: rgb(230, 230, 230);
+    color: black;
+    height: 50px;
+    width: 100%;
+    margin: 0%;
+    text-align: center;
+    white-space: nowrap;
+    position: fixed;
+    display: block;
+}
+nav{
+    position: relative;
+    top: 50px;
+    display: block;
+
+}
+nav .dropdown{
+    background-color: rgb(163, 163, 163);    
+    display: none;
+}
+footer, nav, nav .dropdown div{   
+    background-color: rgb(163, 163, 163);     
+    padding: 7px;
+    text-align: center;
+}
+footer{
+
+    position: sticky;
+    bottom: -215px;
+}
+
+.map iframe{
+    width: 100%;
+    height: 200px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+  }
+nav .dropdown div:hover{
+    background-color: turquoise;
+    border-radius: 0 15px 0 15px;
+}
+nav a:visited{
+    color: rgb(226, 226, 226);
+}
+
+.meniu{
+    display: block;
+    cursor: pointer;
+  }
+  
+  .bar1, .bar2, .bar3{
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .meniu:hover .bar1{
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+  }
+  .meniu:hover .bar2{
+    opacity: 0;
+  }
+  .meniu:hover .bar3{
+    transform: rotate(45deg) translate(-8px, -8px) ;
+  }
+
+h1, p{    
+    padding-left: 5%;
+    padding-right: 5%;
+}
+h1{
+    color: rgb(56, 56, 56);
+}
+
+.hero{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-image: url(/duomenys/teamwork.jpg);
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    width: auto;
+    height: 100vh;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-size: 3em;
+    color: turquoise;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    text-shadow: 0.05em 0.05em 0.08em black, 0.1em 0.3em 0.2em white, 0 0 0.2em white;
+}
+
+#myVideo{
+    display: none;
+}
+
+.textOnVideo {
+    position: absolute;
+    top: 35%;
+    left: 3%;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-size: 2.2em;
+    color: turquoise;
+    font-weight: bold;
+    text-align: start;
+    text-shadow: 0.05em 0.05em 0.08em black, 0.1em 0.3em 0.2em white, 0 0 0.2em white;
+    padding: 20px;
+    line-height: 1.8em;
+  }
+
+ul{
+    list-style: none;
+}
+li{
+    margin: 10px;
+}
+
+.myBenefits{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 10% 0 10%;
+    gap: 20px;
+    width: 80%;
+    align-content: center;
+    justify-content: center;
+}
+.myBenefits div{
+    background-color: transparent;
+    text-align: center;
+    text-shadow: 5px 5px 3px white;
+    font-weight: bold;
+    padding: 10px;
+    border-width: 2px;
+    border-radius: 0 25px 0 25px;
+    border-color:turquoise;
+    border-style: solid;
+    box-shadow: 5px 5px 3px grey;
+}
+ #education{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    scroll-margin-top: 200px;
+    }
+#aboutme{
+    scroll-margin-top: 120px;
+}
+#workExp{
+    scroll-margin-top: 200px;
+}
+#education ul, #workExp ul{
+    list-style: none;
+    margin: 5px;
+    align-content: center;
+}
+#workExp ul{
+    background-color: rgb(221, 221, 221);
+}
+.pirmas {
+border: 2px solid turquoise;
+box-shadow: 5px 5px 3px grey;
+}
+
+#workExp ul ul{
+    text-align: left;
+    list-style-type: disc;
+    padding: 0;
+}
+#workExp ul ul li{
+    padding: 0;
+}
+li{
+    margin-left: 0;
+}
+
+@media screen and (max-width: 768px) {
+    nav:hover .dropdown{
+          display: block;
+          position: static;
+          width: 100%;
+          height: 100px;
+      }
+    }
+@media screen and (min-width: 768px) {
+    nav .dropdown{
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+    }
+    nav .dropdown div{
+        width: 12vw;
+    }
+    nav .meniu{
+        display: none;
+    }
+    .hero{
+        grid-column: 1/3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-image: url(/duomenys/teamwork.jpg);
+    }
+    section{
+        grid-template-columns: 1fr 1fr;
+}
+    #education, #workExp{
+        display: grid;
+        grid-template-columns: 1fr 1fr;  
+    }
+    #personality{
+        grid-template-columns: 1fr;
+    }
+    .myBenefits{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero{
+        display: none;
+    }
+
+    #education, #workExp{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;  
+    }
+   
+    #myVideo {
+        display: block;
+        position: static;
+        right: 0;
+        top: 0;
+        min-width: 100%;
+        margin-top: 100px;
+        z-index: -1;
+    }
+    .textOnVideo {
+        position: absolute;
+        top: 55%;
+        line-height: 1.3em;
+    }
+
+    .myBenefits{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
